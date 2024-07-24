@@ -12,3 +12,15 @@
 | ビルド        | esbuild                                       |
 | linter+formatter | biome                                     |
 | 状態管理      | zustand or jotai                              |
+
+
+## 立ち上げコマンド
+
+```windows
+docker compose up -d
+vercel dev
+npx prisma migrate dev
+```
+
+## 本番ドメイン
+https://mini-blog-two-phi.vercel.app/
