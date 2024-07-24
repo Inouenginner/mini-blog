@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "PRISMA_SCHEMA_DISABLE_ADVISORY_LOCK=FALSE prisma generate && prisma migrate deploy && astro check && astro build",
+    "build": "PRISMA_SCHEMA_DISABLE_ADVISORY_LOCK=TRUE prisma generate && prisma migrate deploy && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "postinstall": "prisma generate"
