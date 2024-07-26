@@ -9,5 +9,5 @@ export default defineConfig({
     applyBaseStyles: false,
   })],
   // これほんとにいらんのか？？
-  // adapter:vercel()
+  adapter:vercel()
 });
