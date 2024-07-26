@@ -14,10 +14,7 @@
       "source": "/api/express/(.*)",
       "destination": "/api/express"
     },
-    {
-      "source": "/(.*)",
-      "destination": "/$1"
-    }
+    { "src": "/(.*)", "dest": "/src/pages/index.astro" }
   ]
   }
   
