@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const CreatePostButton = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,10 +12,20 @@ const CreatePostButton = () => {
     setContent('');
   };
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     // ここで投稿データを処理します（例：APIに送信するなど）
     console.log('投稿データ:', { title, content });
+    try {
+      const response = await fetch('/api/hello');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      console.log(data)
+    } catch (error) {
+      console.error('There has been a problem with your fetch operation:', error);
+    }
     // 処理後にモーダルを閉じる
     closeModal();
   };
